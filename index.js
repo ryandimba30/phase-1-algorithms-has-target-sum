@@ -1,5 +1,15 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  const numbers = {};
+  
+    for (const number of array) {
+      // n steps
+      const complement = target - number;
+      if (complement in numbers) return true;
+      numbers[number] = true;
+    }
+  
+    return false;
 }
 
 /* 
@@ -8,10 +18,16 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  function 
+  if (a + b === target)
+  return true
+  else return false
 */
 
 /*
   Add written explanation of your solution here
+  write a function to check for pair that its sum is equal to the target
+  returns true if that pair is found
 */
 
 // You can run `node index.js` to view these console logs
